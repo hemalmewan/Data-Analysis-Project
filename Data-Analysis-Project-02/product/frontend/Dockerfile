@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 
 # Copy the static images folder from the parent directory
-COPY ../static /app
+COPY ../static/images/app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
