@@ -21,9 +21,9 @@ if menu == "Home":
     # List of image paths (put your real image paths here)
     image_folder = "..\\static\\images"
     images = [
-        os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'img1.jpeg'),
-        os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'img2.jpeg'),
-        os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'img3.png'),
+            os.path.join('static', 'images', 'img1.jpeg'),
+            os.path.join('static', 'images', 'img2.jpeg'),
+            os.path.join('static', 'images', 'img3.png'),
     ]
 
 
