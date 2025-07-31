@@ -13,10 +13,15 @@ pipeline {
       }
     }
 
-    stage('Build and Run Containers') {
+    stage('Build Containers') {
       steps {
         bat 'docker-compose build'
-        bat 'docker-compose up -d'
+      }
+    }
+
+    stage('Run Conteiners'){
+      steps{
+          bat 'docker-compose up -d'
       }
     }
 
