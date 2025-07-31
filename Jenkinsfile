@@ -27,11 +27,12 @@ pipeline {
 
     stage('Test') {
       steps {
-        bat '''
-          timeout 15
+         bat '''
+          echo Waiting for backend to be ready...
+          powershell -Command "Start-Sleep -Seconds 15"
           curl -f http://localhost:8000/docs || exit 1
           curl -f http://localhost:8501 || exit 1
-        '''
+      '''
       }
     }
   }
