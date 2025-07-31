@@ -15,9 +15,9 @@ pipeline {
 
     stage('Build and Run Containers') {
       steps {
-        bat 'docker-compose down || true'
-        bat'docker-compose build'
-        bat 'docker-compose up -d'
+        bat 'Docker_Compose down || true'
+        bat 'Docker_Compose build'
+        bat 'Docker_Compose up -d'
       }
     }
 
@@ -33,7 +33,7 @@ pipeline {
 
     stage('Tear Down') {
       steps {
-        bat 'docker-compose down'
+        bat 'Docker-Compose down'
       }
     }
   }
