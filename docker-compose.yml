@@ -1,6 +1,6 @@
 services:
   backend:
-    build: backend/
+    build: Data-Analysis-Project-02/product/backend/
     container_name: backend_fast_api
     ports:
       - "8000:8000"
@@ -9,7 +9,7 @@ services:
       - me-cfs-depression-classifier
 
   frontend:
-    build: frontend/
+    build: Data-Analysis-Project-02/product/frontend/
     container_name: frontend_streamlit
     ports:
       - "8501:8501"
