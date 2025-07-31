@@ -16,11 +16,13 @@ services:
     ports:
       - "8501:8501"
     depends_on:
-      - backend_fast_api
+      - backend
     networks:
       - me-cfs-depression-classifier
     environment:
-      - BACKEND_URL: http://backend_fast_api:8000
+      BACKEND_URL: http://backend:8000
+
 networks:
   me-cfs-depression-classifier:
     driver: bridge
+
