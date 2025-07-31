@@ -15,15 +15,15 @@ pipeline {
 
     stage('Build and Run Containers') {
       steps {
-        sh 'docker-compose down || true'
-        sh 'docker-compose build'
-        sh 'docker-compose up -d'
+        bat 'docker-compose down || true'
+        bat'docker-compose build'
+        bat 'docker-compose up -d'
       }
     }
 
     stage('Test') {
       steps {
-        sh '''
+        bat '''
           sleep 10
           curl -f http://localhost:8000/docs || exit 1
           curl -f http://localhost:8501 || exit 1
@@ -33,14 +33,14 @@ pipeline {
 
     stage('Tear Down') {
       steps {
-        sh 'docker-compose down'
+        bat 'docker-compose down'
       }
     }
   }
 
   post {
     always {
-      sh 'docker-compose down || true'
+      bat 'docker-compose down || true'
     }
   }
 }
