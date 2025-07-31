@@ -12,6 +12,10 @@ with open("../train_model.pkl","rb") as file:
 
 app=FastAPI() ##define the app
 
+@app.get("/")
+def read_root():
+    return {"message": "Backend is running"}
+
 ##define the predict function
 @app.post("/predict")
 def predict(request: DepressionPredictionRequest):
