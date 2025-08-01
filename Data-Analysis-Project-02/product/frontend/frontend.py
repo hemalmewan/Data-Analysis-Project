@@ -19,25 +19,24 @@ if menu == "Home":
     st.title("ME/CFS & Depression Screening Tool")
     
     # List of image paths (put your real image paths here)
-    image_folder = "..\\static\\images"
-    images = [
-            os.path.join('static', 'images', 'img1.jpeg'),
-            os.path.join('static', 'images', 'img2.jpeg'),
-            os.path.join('static', 'images', 'img3.png'),
+  image_folder = os.path.join(os.path.dirname(__file__), 'static', 'images')
+  images = [
+        os.path.join(image_folder, 'img1.jpeg'),
+        os.path.join(image_folder, 'img2.jpeg'),
+        os.path.join(image_folder, 'img3.png'),
     ]
 
 
-    # Initialize session state
-    if "img_index" not in st.session_state:
-        st.session_state.img_index = 0
-    if "auto_slide" not in st.session_state:
-        st.session_state.auto_slide = True
-
-    # Image display
-    st.image(images[st.session_state.img_index])
-
-    # Manual controls
-    col1, col2, col3 = st.columns([1, 1, 2])
+     # Safely display image
+    current_img = images[st.session_state.img_index]
+    if os.path.exists(current_img):
+        st.image(current_img)
+    else:
+        st.warning(f"Image not found: {current_img}")
+        
+        # Manual controls
+        col1, col2, col3 = st.columns([1, 1, 2])
+        
     with col1:
         if st.button("◀️ Previous"):
             st.session_state.img_index = (st.session_state.img_index - 1) % len(images)
