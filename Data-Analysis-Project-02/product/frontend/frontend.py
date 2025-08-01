@@ -19,8 +19,8 @@ if menu == "Home":
     st.title("ME/CFS & Depression Screening Tool")
     
     # List of image paths (put your real image paths here)
-  image_folder = os.path.join(os.path.dirname(__file__), 'static', 'images')
-  images = [
+    image_folder = os.path.join(os.path.dirname(__file__), 'static', 'images')
+    images = [
         os.path.join(image_folder, 'img1.jpeg'),
         os.path.join(image_folder, 'img2.jpeg'),
         os.path.join(image_folder, 'img3.png'),
