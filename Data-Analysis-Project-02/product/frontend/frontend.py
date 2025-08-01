@@ -27,7 +27,13 @@ if menu == "Home":
     ]
 
 
-     # Safely display image
+      # Initialize session state
+    if "img_index" not in st.session_state:
+        st.session_state.img_index = 0
+    if "auto_slide" not in st.session_state:
+        st.session_state.auto_slide = True
+
+    # Display current image safely
     current_img = images[st.session_state.img_index]
     if os.path.exists(current_img):
         st.image(current_img)
