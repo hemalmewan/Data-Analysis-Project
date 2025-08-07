@@ -84,7 +84,7 @@ elif menu == "App":
         }
 
         ##make a POST request to the backend API
-        response=requests.post("http://127.0.0.1:8000/predict",json=input_data)
+        response=requests.post("http://backend:8000/predict",json=input_data)
 
         ##check if the response is successful
         if response.status_code==200:
@@ -174,5 +174,6 @@ Feel free to use the contact form below to send us your inquiries, and we will g
     **Email:** mewanmuna2000@gmail.com  
     **Website:** [www.group12research.org](https://www.group12research.org)
     """)
+
 
 
