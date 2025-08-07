@@ -40,8 +40,8 @@ if menu == "Home":
     else:
         st.warning(f"Image not found: {current_img}")
         
-        # Manual controls
-        col1, col2, col3 = st.columns([1, 1, 2])
+    # Manual controls
+    col1, col2, col3 = st.columns([1, 1, 2])
         
     with col1:
         if st.button("◀️ Previous"):
@@ -174,3 +174,4 @@ Feel free to use the contact form below to send us your inquiries, and we will g
     **Email:** mewanmuna2000@gmail.com  
     **Website:** [www.group12research.org](https://www.group12research.org)
     """)
+
