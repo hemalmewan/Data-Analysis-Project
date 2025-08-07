@@ -18,11 +18,12 @@ services:
     networks:
       - me-cfs-depression-classifier
     environment:
-      BACKEND_URL: http://backend:8000/
+      BACKEND_URL: http://backend:8000/predict
 
 networks:
   me-cfs-depression-classifier:
     driver: bridge
+
 
 
 
