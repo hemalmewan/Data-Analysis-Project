@@ -133,17 +133,17 @@ elif menu == "Team Members":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.image(os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'member3.jpg'), width=150)
+        st.image(os.path.join(os.path.dirname(__file__),'static', 'images', 'member3.jpg'), width=150)
         st.markdown("**Maheesha Sewmini**  \n*Data Scientist*")
         st.caption("Maheesha specializes in data analytics and visualization, delivering insights from complex datasets.")
 
     with col2:
-        st.image(os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'HemalMewantha.jpg'), width=150)
+        st.image(os.path.join(os.path.dirname(__file__),'static', 'images', 'HemalMewantha.jpg'), width=150)
         st.markdown("**Hemal Mewantha**  \n*Backend Developer*")
         st.caption("Hemal focuses on robust backend systems and API development with expertise in scalable architectures.")
 
     with col3:
-        st.image(os.path.join(os.path.dirname(__file__), '..', 'static', 'images', 'member1.jpg'), width=150)
+        st.image(os.path.join(os.path.dirname(__file__),'static', 'images', 'member1.jpg'), width=150)
         st.markdown("**Sanjana Fernando**  \n*ML Engineer*")
         st.caption("Sanjana builds and deploys machine learning models with a focus on real-time prediction systems.")
 # --- FAQ ---
@@ -174,4 +174,5 @@ Feel free to use the contact form below to send us your inquiries, and we will g
     **Email:** mewanmuna2000@gmail.com  
     **Website:** [www.group12research.org](https://www.group12research.org)
     """)
+
 
